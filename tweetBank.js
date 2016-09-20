@@ -4,7 +4,7 @@ var _ = require('lodash');
 var data = [];
 
 function add (name, content) {
-  data.push({ name: name, content: content});
+  data.push({ name: name, content: content, id: data.length});
 }
 
 function list () {
@@ -40,7 +40,6 @@ for (var i = 0; i < 10; i++) {
 }
 
 module.exports.add("Rando","This is a random tweet.");
-console.log(data);
+
 // https://lodash.com/docs/4.16.0#filter
 //if checking for more than one match, pass in obj of key/value pairs
-console.log(module.exports.find(["name","Rando"]));
